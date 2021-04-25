@@ -20,9 +20,9 @@ As mentioned in the **Introduction**, this template is also very useful when you
 1. `/proc/iomem` - can be used to view the physical address layout of the system.
 2. `/proc/self/pagemap` - can be used to get a physical address from a virtual address (see `exploit.c`).
 3. `/sys/devices/pci.*/.*/.*` - the PCI device in `sysfs`. Lots of useful information here.
-    `config` - The PCI device configuration space. R/W
-    `resource` - Shows a layout of the MMIO and I/O port regions
-    `resourceX` - MMAP-able files that each represent an MMIO or I/O port region.
+    * `config` - The PCI device configuration space. R/W
+    * `resource` - Shows a layout of the MMIO and I/O port regions
+    * `resourceX` - MMAP-able files that each represent an MMIO or I/O port region.
 
 # 32-bit physical address constraints
 
