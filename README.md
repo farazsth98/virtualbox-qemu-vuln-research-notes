@@ -54,3 +54,8 @@ Note that you may see multiple instances of `System RAM` in the `/proc/iomem` ou
 Not done yet. I haven't needed to write an LKM yet, since all of the bugs I've worked on have been triggerable directly from userspace.
 
 A good example of a full exploit through an LKM can be found here: https://github.com/cchochoy/e1000_fake_driver/
+
+# Useful links
+
+1. A full e1000 exploit in an LKM - https://github.com/cchochoy/e1000_fake_driver/
+2. Qemu VM Escape Case Study - http://phrack.org/papers/vm-escape-qemu-case-study.html
