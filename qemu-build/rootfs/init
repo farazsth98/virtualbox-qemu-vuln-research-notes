@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# procfs is required to actually run processes in the first place.
+mount -t proc none /proc
+
+# sysfs is required for access to PCI devices from userland. This is available
+# by default in pretty much every Linux distribution I've come across.
+mount -t sysfs non /sys
+
+# We must also initialize the devfs, otherwise devices won't work
+/sbin/mdev -s /dev
+
+# Let's go
+exec /bin/sh

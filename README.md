@@ -6,6 +6,7 @@ This repo is meant to aggregate all of these tips and tricks in one place, and w
 
 # Contents
 
+* [Minimal QEMU build setup for research](/qemu-build)
 * [Template scripts](/templates) (only a simple userspace template so far)
 * [Tips and tricks](/tips_and_tricks.md)
 
