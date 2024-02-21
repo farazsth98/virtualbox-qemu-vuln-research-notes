@@ -57,6 +57,7 @@ Note that the build should also work with `pulse` and `alsa` enabled, but I disa
 Finally, you can run the following to start the build process:
 
 ```
+source ./env.sh
 kmk BUILD_TYPE=debug
 ```
 
