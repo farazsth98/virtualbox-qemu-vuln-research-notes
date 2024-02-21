@@ -12,7 +12,9 @@ Surprisingly enough, you can interact with PCI devices entirely from userland us
 
 # MMIO or I/O ports?
 
-This comes down to personal preference. To use I/O ports, you'd find the corresponding I/O ports from `lshw` / `lspci` / the PCI device's `resource` file (they're generally a range of 16-bit integers), and then do the following:
+This comes down to personal preference, except in cases where I/O ports actually behave differently to MMIO. 
+
+To use I/O ports, you'd find the corresponding I/O ports from `lshw` / `lspci` / the PCI device's `resource` file (they're generally a range of 16-bit integers), and then do the following:
 
 ```c
 // Need I/O privilege level 3 to communicate with PCI devices through I/O ports
