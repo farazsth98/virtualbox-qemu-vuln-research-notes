@@ -2,7 +2,7 @@
 
 The official [Virtualbox Linux build instructions](https://www.virtualbox.org/wiki/Linux%20build%20instructions) are outdated.
 
-The following are a list of steps that will work to build a debug version of Virtualbox on Ubuntu 22.04. This has been tested on of February 21, 2024.
+The following are a list of steps that will work to build a debug version of Virtualbox on Ubuntu 22.04. This has been tested on February 21, 2024.
 
 # Disclaimer
 
