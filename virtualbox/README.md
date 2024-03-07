@@ -5,10 +5,10 @@
 - [Build instructions (Ubuntu 22.04)](#build-instructions-ubuntu-2204)
 - [ASAN](#asan)
 - [Debugging Setup](#debugging-setup)
- - [Setting up SSH](#setting-up-ssh)
- - [Exploit Development](#exploit-development)
- - [Attaching to the Process](#attaching-to-the-process)
- - [Some Hurdles](#some-hurdles)
+  - [Setting up SSH](#setting-up-ssh)
+  - [Exploit Development](#exploit-development)
+  - [Attaching to the Process](#attaching-to-the-process)
+  - [Some Hurdles](#some-hurdles)
 
 # Introduction
 
