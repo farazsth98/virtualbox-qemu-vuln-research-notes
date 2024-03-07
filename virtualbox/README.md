@@ -133,7 +133,7 @@ Host guest
 
 ## Exploit Development
 
-Firstly, please refer to the [userspace template README](/templates/README.md) for help with actually communicating with the devices and triggering the code. The example I provided is ran in userspace, but you can do the same with a Linux kernel module if you'd like (there is an example link in there for that as well).
+Firstly, please refer to the [userspace template README](/templates/README.md) for help with actually communicating with the devices and triggering the code. The example I provided is ran in userspace, but you can do the same with a Linux kernel module if you'd like (there are example links for that in there too).
 
 I'll have better examples up soon, just need some time 😁
 

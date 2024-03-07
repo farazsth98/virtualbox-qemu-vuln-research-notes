@@ -11,6 +11,8 @@ As mentioned in the root README, this template is also very useful when you're a
 
 # The Linux Kernel Module exploit template
 
-Not done yet. I haven't needed to write an LKM yet, since all of the bugs I've worked on have been triggerable directly from userspace.
+This is usually done by unloading the LKM for the device, and loading your own. The semantics of the exploit will largely be the same though. Although, if I'm not wrong, certain exploits are much easier to write and debug as an LKM as opposed to a userspace program.
 
 A good example of a full exploit through an LKM can be found here: https://github.com/cchochoy/e1000_fake_driver/
+
+Another one is Andy Nguyen's `virtio-net` exploit, which can be found here: https://github.com/google/security-research/tree/master/pocs/oracle/virtualbox/cve-2023-22098
