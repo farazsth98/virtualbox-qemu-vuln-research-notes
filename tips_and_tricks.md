@@ -47,18 +47,30 @@ uint64_t phys_addr = gva_to_gpa(mapping);
 
 One problem with the approach above is that there is no guarantee that the physical address returned by `gva_to_gpa()` ([see here](/templates/userspace_template/exploit.h)) is a 32-bit address. This is only a problem because a lot of PCI devices refuse to work with >32-bit physical addresses. A classic example of this is the PCNet network device, where the Tx ring buffer's physical address's high and low words are stored in two 16-bit registers. You're simply out of luck if you get a physical address with more than 32-bits.
 
-In cases like this, instead of using `mmap()` + `gva_to_gpa()` to get a physical address for a virtual mapping, use the `map_phy_address()` function to directly map `System RAM` into your userspace. You can find the address of your system's RAM region through `/proc/iomem`:
+When I ran into this issue, I just used code similar to the following to keep mapping -> unmapping until I got a physical address that fit within 32 bits:
 
-```
-# cat /proc/iomem
-00000000-00000fff : Reserved
-00001000-0009fbff : System RAM // Map this area
-0009fc00-0009ffff : Reserved
-[ ... ]
-```
+```c
+uint8_t *ptr;
+uint64_t gpa;
 
-```
-uint64_t phys_ram_mapping = map_phy_address(0x9e000, 0x1000);
-```
+while (1) {
+  ptr = mmap(0, 0x1000, PROT_READ | PROT_WRITE,
+                            MAP_SHARED | MAP_ANONYMOUS | MAP_POPULATE, -1, 0);
 
-Note that you may see multiple instances of `System RAM` in the `/proc/iomem` output, but only the first occurrence has worked for me. Not sure why, but it's a constraint that you have to live with. If you need more memory than available in this first region, you're probably better off writing a kernel module.
+  if (ptr == MAP_FAILED) {
+      printf("[!] Mmap failed!\n");
+      exit(-1);
+  }
+
+  // Get the physical address of the mapping
+  gpa = gva_to_gpa((void *) ptr);
+
+  if (gpa > 0xffffffff) {
+      // Don't care about the return value, this shouldn't fail
+      (void)munmap(ptr, 0x1000);
+  } else {
+      printf("[DEBUG] GPA Mapped: 0x%lx\n", gpa);
+      break;
+  }
+}
+```
