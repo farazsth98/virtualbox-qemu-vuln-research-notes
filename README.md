@@ -6,7 +6,9 @@ It also contains a template for a userspace proof of concept that you can use to
 
 # Contents
 
-* [VirtualBox Ubuntu 22.04 Build + Debugging Guide](/virtualbox/README.md)
+* [VirtualBox Research Notes](/virtualbox/README.md)
+  * [Debug environment setup guide](./virtualbox/build-and-debug-notes.md)
+  * [Exploit Primitives notes](./virtualbox/exploit-primitives.md)
 * [Minimal QEMU build setup for research](/qemu-build)
 * [Template scripts](/templates) (only a simple userspace template so far)
 * [Tips and tricks](/tips_and_tricks.md)
