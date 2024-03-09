@@ -1,5 +1,7 @@
 # Building and Debugging
 
+For google search: VirtualBox Build Guide, VirtualBox Build Instructions, VirtualBox 7.0.14 Build
+
 # Table of Contents
 
 - [Introduction](#Introduction)

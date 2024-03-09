@@ -1,6 +1,6 @@
 # Building and Debugging
 
-See the [Building and Debugging](./build-and-debug-notes.md) document.
+See the [Building and Debugging](./build-and-debug-notes.md) document for information on how to build VirtualBox. This guide assumes VirtualBox 7.0.14, but any recent-ish version should work.
 
 # Exploit primitives
 
