@@ -2,7 +2,9 @@
 
 This repo contains a guide on setting up Virtualbox and QEMU for doing VM escape related security research.
 
-It also contains a template for a userspace proof of concept that you can use to interact with emulated devices in the hypervisor code. Note that writing a kernel driver and then interacting with the kernel driver from userspace is generally a cleaner way to go though.
+It also contains a template for a userspace proof of concept that you can use to interact with emulated devices in the hypervisor code. 
+
+**Note: if your Guest VM has secure boot enabled, you cannot use the above template. You must write a kernel module and sign it using the private key (accessible as long as you're root). I'll document how to do this some time in the future.**
 
 # Contents
 
