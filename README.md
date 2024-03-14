@@ -18,4 +18,4 @@ It also contains a template for a userspace proof of concept that you can use to
 # Useful links
 
 1. A full e1000 exploit in an LKM - https://github.com/cchochoy/e1000_fake_driver/
-2. Qemu VM Escape Case Study - http://phrack.org/papers/vm-escape-qemu-case-study.html
+2. Qemu VM Escape Case Study - http://www.phrack.org/issues/70/5.html
